@@ -45,7 +45,7 @@ https://templatemo.com/tm-536-dream-pulse
                 </li>
                 <li class="nav-item">
                   <a href="#portfolio2" class="nav-link">
-                    <span class="d-inline-block mr-3">Web Scraping</span>
+                    <span class="d-inline-block mr-3">Word Clouds</span>
                     <span class="d-inline-block tm-white-rect"></span>
                   </a>
                 </li>
@@ -77,17 +77,17 @@ https://templatemo.com/tm-536-dream-pulse
               </ul>
               <ul class="nav flex-row tm-social-links">
                 <li class="nav-item">
-                  <a href="https://www.facebook.com/kudin36" class="nav-link tm-social-link">
+                  <a href="https://www.facebook.com/kudin36" class="nav-link tm-social-link"target="_blank">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://twitter.com/Kudin36Twit" class="nav-link tm-social-link">
+                  <a href="https://twitter.com/Kudin36Twit" class="nav-link tm-social-link" target="_blank">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://www.linkedin.com/in/khairudinyaacob" class="nav-link tm-social-link">
+                  <a href="https://www.linkedin.com/in/khairudinyaacob" class="nav-link tm-social-link" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                 </li>
@@ -131,10 +131,39 @@ https://templatemo.com/tm-536-dream-pulse
                             Using data analytic techniques to visualize teclo churn analytics.<br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://raw.githubusercontent.com/theleadio/datascience_demo/master/telco_customer_churn_dataset.csv" target="_blank">https://raw.githubusercontent.com/telco_customer_churn_dataset.csv</a><br>
-                            Project link: <a href="https://kudin36.github.io/" target="_blank">https://kudin36.github.io/</a><br>
+                            Project link: <a href="https://colab.research.google.com/drive/1RZ8pzXqTyz7YOFr2nWi8fswV_pmmzHiQ?usp=sharing" target="_blank">https://colab.research.google.com/drive/1RZ8pzXqTyz7YOFr2nWi8fswV_pmmzHiQ?usp=sharing</a><br><br>
+                            The method I am using to analyze the dataset is by using Data Science OSEMN framework. It can be best explained by this 
+                            article writen by <a href="https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492" target="_blank">Dr. Lau here</a>.<br>
+                            <img src="img/OSEMN.png" alt="telco">  
+                            
 
-                            Analyze by using Data Science OSEMN framework.
+                            <div class="transparentbox">
+                              <p>This transparent box contains some text</p>
+                            </div>
+                            The Data Question<br>
+                            My aim was to 
 
+                            Data Collection
+                            I collected data from three different sources: bechdeltest.com, Kaggle, and this movies dataset.
+                            Data Analysis
+                            I will use Python to perform all data analysis and visualization.
+                            First, I used data from bechdeltest.com, which was pretty easy to grab because of their API.
+                            # imports
+                            import urllib, json
+                            import pandas as pd
+                            df = pd.read_json('http://bechdeltest.com/api/v1/getAllMovies')
+                            Now, I will take a look at the head of the data frame:
+                            df.head()
+
+                            Image by author
+                            There are five variables in the data frame:
+                            rating: Bechdel Score of the movie from 0 to 3. A Bechdel score lower than 3 means the movie failed the Bechdel test, and a Bechdel score of 3 means the movie passed.
+                            imdbid: The movie’s IMDB number
+                            title: Movie title
+                            id: Unique movie ID
+                            year: Year the movie was released
+            Taking a look at the column ‘year’, you can see that there are movies present from the 19th century, and a lot of those movies have a Bechdel score of 0.
+I am going to create a new data frame with movies released after the year 1967, and will be using this new data frame for the rest of my analysis.
                             Obtain data: from Kaggle.
                             Scrub data / clean data: rename column and modify value.
                             Explore data: with Pandas DataFrame, Seaborn and Matplotlib visualization.
@@ -151,7 +180,7 @@ https://templatemo.com/tm-536-dream-pulse
               <div class="col-12 tm-section-pad">
                   <div class="tm-flex-item-left">
                       <div class="tm-w-80">
-                          <h2 class="tm-color-primary tm-section-title mb-4">Web Scraping </h2>
+                          <h2 class="tm-color-primary tm-section-title mb-4">Word Clouds</h2>
                           <p class="mb-5">
                             Aenean est augue, iaculis ut arcu a, cursus tempus eros.
                             Maecenas ut efficitur lectus, vel commodo nibh. Vivamus
@@ -193,11 +222,19 @@ https://templatemo.com/tm-536-dream-pulse
                   <div class="tm-flex-item-left">
                       <div class="tm-w-80">
                           <h2 class="tm-color-primary tm-section-title mb-4">Dashboard</h2>
-                          <p class="mb-5">
-                            Aenean est augue, iaculis ut arcu a, cursus tempus eros.
-                            Maecenas ut efficitur lectus, vel commodo nibh. Vivamus
-                            consequat massa non euismod facilisis. Morbi assumsan non libero
-                            a vehicula. Donec blandit suscipit magna sit amet elementum.
+                          <p class="mb-5"><img src="img/HR.png" alt="hr" style="float:left;width:80px;height:80px;">
+                            <p style="color: #069"; fontsize:10> HR Atrition</p> <br>
+                            Creating an online dashboard Google Data Studio to analyse HR Atrition.<br>
+                            The datasets and complete code can be found at the link below.<br>
+                            Dataset link: <a href="https://raw.githubusercontent.com/theleadio/datascience_demo/master/HR_dataset.csv"target="_blank">https://raw.githubusercontent.com/theleadio/datascience_demo/master/HR_dataset.csv</a><br>
+                            Project link: <a href="https://datastudio.google.com/reporting/6b5350a2-861f-4816-b60f-d4ecd165ee43/" target="_blank">https://datastudio.google.com/reporting/6b5350a2-861f-4816-b60f-d4ecd165ee43</a><br>
+                            <br>
+                            <iframe width="900" height="700" src="https://datastudio.google.com/embed/reporting/6b5350a2-861f-4816-b60f-d4ecd165ee43/page/rUSXC" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            
+                            
+                            
+                            
+                            <br><br><br><br><br><br><br>
                           </p>
                       </div>
           </div></div></div>
@@ -214,7 +251,8 @@ https://templatemo.com/tm-536-dream-pulse
                             My current job in the Business Development Department has provided me with the experience and skill required, 
                             as well my previous work in accounting & finance related. 
                             It would also allow me to put to good use of my interpersonal and analytical skills. I believe that my training and 
-                            experience matches what you are looking for, and I am very enthusiastic about the opportunity to contribute in your organization
+                            experience matches what you are looking for, and I am very enthusiastic about the opportunity to contribute in your organization<br>
+                            Project link: <a href="https://kudin36.github.io/" target="_blank">https://kudin36.github.io/</a><br><br>
 
                           </p>
                           
