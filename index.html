@@ -128,8 +128,8 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-w-80">
                             <h2 class="tm-color-primary tm-section-title mb-4">Exploratory Data Analysis & Visualization</h2>
                             <p class="mb-5"><img src="img/linephone.png" alt="telco" style="float:left;width:80px;height:80px;">
-                            <p style="color: #069"; fontsize:10> Telco Churn Analytics</p> <br>
-                            Using data analytic techniques to visualize teclo churn analytics.<br>
+                            <p style="color: #069"; fontsize:10> Telco</p> <br>
+                            <h1 style="color:black; font-size:30px;">Using Data Analytic Techniques To Visualize Telco Churn</h1><br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://raw.githubusercontent.com/theleadio/datascience_demo/master/telco_customer_churn_dataset.csv" target="_blank">https://raw.githubusercontent.com/telco_customer_churn_dataset.csv</a><br>
                             Project link: <a href="https://colab.research.google.com/drive/1RZ8pzXqTyz7YOFr2nWi8fswV_pmmzHiQ?usp=sharing" target="_blank">https://colab.research.google.com/drive/1RZ8pzXqTyz7YOFr2nWi8fswV_pmmzHiQ?usp=sharing</a><br><br>
@@ -137,7 +137,7 @@ https://templatemo.com/tm-536-dream-pulse
                             article writen by Dr. Lau <a href="https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492" target="_blank">here</a>.<br>
                             <img src="img/OSEMN.png" alt="telco">  
                             <br><br>
-                            <b>Importing Python Libraries</b><br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             First, we need to import the necessary python libraries for this analysis. These include the basic packages such 
                             pandas, seaborn and matplotlib.
                             
@@ -145,8 +145,8 @@ https://templatemo.com/tm-536-dream-pulse
                               <p>import pandas as pd<br>
                                 import seaborn as sns<br>
                                 import matplotlib.pyplot as plt</p>
-                            </div><br>
-                            <b>Data Source</b><br>
+                            </div><br><br>
+                            <u><b>Data Source</b></u><br>
                             The data that I am using for this portfolio is the raw dataset sample given in the class as per link dataset before. 
                             In a quick glance it contains columns and rows with mostly words & numbers in the table.
                             I will use Python to perform all data analysis and visualization. This data is originally in a CSV file and we will 
@@ -161,8 +161,8 @@ https://templatemo.com/tm-536-dream-pulse
                             </div>
                             <img src="img/sample.png" alt="sam" style="width:1000px"> 
                             <img src="img/sample1.png" alt="sam1"style="width:1000px"> 
-                            Our focus is the ‘Churn’ column which contains the sample of subscriber churning or not.<br> 
-                            <br><b>Data Scrubbing</b><br>
+                            Our focus is the ‘Churn’ column which contains the sample of subscriber churning or not.<br><br>
+                            <u><b>Data Scrubbing</b></u><br>
                             Next, we will check if the columns have any null values.
                             <div class="transparentbox">
                               <p>df.isnull().sum()</p>
@@ -244,7 +244,7 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="transparentbox">
                               <p>df = df.dropna()</p>
                             </div>
-                            <br><b>Explore Data</b><br>
+                            <u><br><b>Explore Data</b></u><br>
                             For exploring the data after the data scrubing, i would like to use the descriptive analysis function on the data, so let's try that.
                             <div class="transparentbox">
                               <p>df.describe()</p>
@@ -261,8 +261,8 @@ https://templatemo.com/tm-536-dream-pulse
                             Another way to explore data is using test significant variables.Testing significant variables often is done with correlation.<br>
                             The correlation can be find by using heatmap. By displaying a panda dataframe in Heatmap style, a visualization that is very useful 
                             in visualizing the concentration of values between two dimensions of a matrix. 
-                            This helps in finding patterns and gives a perspective of depth..<br>
-                            <b>Visualization Data as Heatmap</b><br>
+                            This helps in finding patterns and gives a perspective of depth.<br><br>
+                            <u><b>Visualization Data as Heatmap</b></u><br>
                             Lets try the heatmap function as per below.
                             <div class="transparentbox">
                               <p>sns.set(rc={'figure.figsize':(20,20)})
@@ -275,8 +275,8 @@ https://templatemo.com/tm-536-dream-pulse
                             This correlation could help us to find a batter model predictor for churn later on. <br>
                             While we also could point out that churn has a compratively negative relationship with tenure as well<br>
                             Lastly, we will utilise data visualisation to help us to identify significant patterns and trends in our data. We can gain a better picture through simple charts like 
-                            line charts or bar charts to help us to understand the importance of the data.<br>
-                            <b>Visualization Data as Countplot</b><br>
+                            line charts or bar charts to help us to understand the importance of the data.<br><br>
+                            <u><b>Visualization Data as Countplot</b></u><br>
                             Here we use Countplot, visualization that is very useful to show the counts of observations in each categorical bin using bars. Since we are focusing on Churn data, 
                             I will use all other columns as the x axis in the countplot to find which column has best relatioship with the churn with the code as per below. 
                             <div class="transparentbox">
@@ -293,8 +293,8 @@ https://templatemo.com/tm-536-dream-pulse
                             2.   Senior Citizens, Partner and Dependents has the same trend where numbers of churning is quite low compare to non churning.<br>
                             3.   Subcscriber who has Internet Service Fiber Optic to churn are are not that different that much.<br>
                             4.   PhoneService has different trend altogether, where phone service and non phone service are already varies so much. Subscribers
-                             with phone service shows a large difference in not churning than churn<br>
-                             <b>Visualization Data as Boxplot</b>
+                             with phone service shows a large difference in not churning than churn<br><br>
+                             <u><b>Visualization Data as Boxplot</b></u><br>
                              Another visualization method, create boxplot, a visualization for graphically depicting groups of numerical data through their quartiles. 
                              We wil use data x= Churn data, I will use other columns as the y axis in the boxplot as per below
                             <br>
@@ -310,8 +310,8 @@ https://templatemo.com/tm-536-dream-pulse
                               Findinds from boxplot<br>
                               1. You can find outliers in both tenure and Total Charges, they are data outside of Q3 as per the graph.<br>
                               2. Both tenure and Total Charges to churn has also low 1st quartile percentage till the median<br>
-                              3. Moonthly charges has a higher range in churn than the non churner.<br>
-                            <b>Model Data</b><br>
+                              3. Moonthly charges has a higher range in churn than the non churner.<br><br>
+                            <u><b>Model Data</b></u><br>
                             In modelling the data, not all your features or values are essential to predicting your model. 
                             What you need to do is to select the relevant ones that contribute to the prediction of results. 
                             For accuracy, we need to use as much data as we can but relevant as well.
@@ -325,8 +325,8 @@ https://templatemo.com/tm-536-dream-pulse
                                 'OnlineBackup', 'TechSupport', 'PaperlessBilling', 'tenure', 'MonthlyCharges', 'TotalCharges' ]
                                train_data = df[columns]
                               train_labels = df['Churn']</p>
-                            </div><br> 
-                            <b>Importing Python Libraries</b><br>
+                            </div><br> <br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             As usual, we need to import the specific pyton libraries which is sklearn  train_test_split, decision tree and metrics as per below<br>
                             <div class="transparentbox">
                               <p>from sklearn.model_selection import train_test_split<br>
@@ -349,10 +349,10 @@ https://templatemo.com/tm-536-dream-pulse
                                   </div>
                             <img src="img/accuracy.png" alt="acc"><br>     
                             Here after filtering and cleaning the data, we would get a 79.5% of accuracy if to model it in which i think that's a good indicator.
-                            <br>    
-                            <b>Visualizing Model Data as Decision Trees</b><br>
-                            Additionally, You can visualize the Decision Tree alogorithm using the sklearn graphiz library.<br>
-                            <b>Importing Python Libraries</b><br>
+                            <br><br>    
+                            <u><b>Visualizing Model Data as Decision Trees</b></u><br>
+                            Additionally, You can visualize the Decision Tree alogorithm using the sklearn graphiz library.<br><br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             First we import libraries  sklearn graphviz function for display and plot the tree<br>
                             <div class="transparentbox">
                               <p>from sklearn.model_selection import train_test_split<br>
@@ -370,8 +370,8 @@ https://templatemo.com/tm-536-dream-pulse
                                 <img src="img/decisiontree.png" alt="chart" style="width:1000px"><br>  
                                 Findinds from decison tree<br>
                               1. Subscribers that has tenure that 16.5 months and monthly charges mroe than 68.25 are likely to churn with 35 out of the sample 7,032.<br>
-                              2. The probability increases of not churning if their tenure with the telco more than 15.5 months.<br>
-                              <b>Using the model</b><br>  
+                              2. The probability increases of not churning if their tenure with the telco more than 15.5 months.<br><br>
+                              <u><b>Using The Model</b></u><br>  
                               Lets recap the model with the colums involved are 'SeniorCitizen' 'Partner', 'PhoneService', 'DeviceProtection', 'OnlineSecurity',
                                'OnlineBackup', 'TechSupport', 'PaperlessBilling', 'tenure', 'MonthlyCharges', 'TotalCharges'.<br> 
                                Let's take a scenario where subsciber has phone service, Device protection,online backup,tech support, 
@@ -389,15 +389,13 @@ https://templatemo.com/tm-536-dream-pulse
                               "TotalCharges":1000<br><br>
                               Lets put scenario input inside model.prediction and see how it goes
                               <p>model.predict([[0, 0, 1, 1, 0, 1, 1,1,12,80,1000]])</p> 
-                              <img src="img/prediction1.png" alt="chart" style="width:500px"><br>  
+                              <img src="img/prediction1.png" alt="chart" style="width:500px"><br><br>
                               
-                              <b>Interpreting Data</b><br> 
-                            The result 1 means customers with the scenario given would churn with accuracy model 79.5%. <br>
+                             <u><b>Interpreting Data</b></u> <br> 
+                            The result 1 means customers with the scenario given would churn with accuracy model 79.5%. <br><br>
                             Suggestion to Telco company <br>
-                            1. To attract more customers with longer tenure by roll out better packages for longer term.
-                            2. To give loyalty discounts to reduce monthly charges.
-
-                            That's it, this is how Exploratory Data Analysis & Visualization using Pandas. I hope this project is as informative as i'm doing it.  
+                            1. To attract more customers with longer tenure by roll out better packages for longer term.<br>
+                            2. To give loyalty discounts to reduce monthly charges.  
                             <br><br><br>
                             </p>
                             </div>
@@ -409,8 +407,8 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-w-80">
                             <h2 class="tm-color-primary tm-section-title mb-4">Word Clouds</h2>
                             <p class="mb-5"><img src="img/twitter.png" alt="telco" style="float:left;width:80px;height:80px;">
-                            <p style="color: #069"; fontsize:10> Trump Tweets</p> <br>
-                            Making word clouds based on Trump Tweet.<br>
+                            <p style="color: #069"; fontsize:10>Tweets</p> <br>
+                            <h1 style="color:black; font-size:30px;">Making Word Clouds Based On Trump Tweets</h1><br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://www.kaggle.com/austinreese/trump-tweets?select=realdonaldtrump.csv"target="_blank">https://www.kaggle.com/austinreese/trump-tweets?select=realdonaldtrump.csv</a><br>
                             Project link: <a href="https://colab.research.google.com/drive/1ib-FHUnztA8MuVPSOVXnyGB-pha3j0kY?usp=sharing" target="_blank">https://colab.research.google.com/drive/1ib-FHUnztA8MuVPSOVXnyGB-pha3j0kY?usp=sharing</a><br><br>
@@ -418,7 +416,7 @@ https://templatemo.com/tm-536-dream-pulse
                             In this portfolio, I am interested with words is he using the most in his tweets. How is he choosing these particular words to send his powerful messages, which effect instantly on stock market and the economic. 
                             Using visualization, creating a wordcloud with Donald Trump’s recent tweets to explore his most used words.
                             <br><br>
-                            <b>Importing Python Libraries</b><br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             First, we need to import the necessary python libraries for this analysis. These include the basic packages such as
                             pandas, numpy, os import path, PIL import inage, wordcloud as well stopwords,imagecolor generator and urllib and lastly matplotlib pyplot and inline.
                             
@@ -431,8 +429,8 @@ https://templatemo.com/tm-536-dream-pulse
                               import urllib<br>
                               import matplotlib.pyplot as plt<br>
                               % matplotlib inline</p>
-                            </div><br>
-                            <b>Data Source</b><br>
+                            </div><br><br>
+                            <u><b>Data Source</b></u><br>
                             The data that I am using for this portfolio is the raw dataset in kaggle as per link prior. It is stated that the tweets are from July 2020 to October 2020
                             In a quick glance it contains columns and rows with mostly words & numbers in the table.
                             I will use Python to perform all data analysis and visualization. This data is originally in a CSV file and we will 
@@ -442,8 +440,8 @@ https://templatemo.com/tm-536-dream-pulse
                             df</p>
                             </div>
                             <img src="img/tweet1.png" alt="tweet1" style="width:1000px"> 
-                            Our focus is the ‘content’ column which contains the words of Trump tweet. Mind on the NaN values as well.<br> 
-                            <br><b>Data Scrubbing</b><br>
+                            Our focus is the ‘content’ column which contains the words of Trump tweet. Mind on the NaN values as well.<br><br>
+                            <u><b>Data Scrubbing</b></u><br>
                             Next, we will check if the columns have any null values.
                             
                             <div class="transparentbox">
@@ -462,7 +460,7 @@ https://templatemo.com/tm-536-dream-pulse
                               <div class="transparentbox">
                                 <p>stopwords = set(STOPWORDS)</p>
                                 </div>
-                            <img src="img/tweet3.png" alt="tweet3"><br>
+                            <img src="img/tweet3.png" alt="tweet3"><br><br>
                             <b>Visualizing Data as Wordcloud</b><br>
                             One of the function that we want use as one of the parameter is stopwords where it will ignore commonly used words such “the”, “a”, “an”, “in”
                             Set it and use another line code with the plotting pyplot,Imagegenerator, and other parameters like width and background color
@@ -529,9 +527,8 @@ https://templatemo.com/tm-536-dream-pulse
                               </div><br>
                               <img src="img/wordcloud2.png" alt="tweet5"style="width:1000px"><br>
                               <br>
-                              Alright, now we have word cloud of Trump Tweet in his own Trump mask image with his iconic and unique hairstyle.<br>
-                              <b>Interpreting Data</b>
-                              <b>Wordcloud Analysis</b><br>
+                              Alright, now we have word cloud of Trump Tweet in his own Trump mask image with his iconic and unique hairstyle.<br><br>
+                              <u><b>Interpreting Data</b></u><br>
                               Whoever been keeping tabs on Donald’s twitter, will probably be familiarised with his tweets. Most tweeted words contain “Biden”, “America Great” and “Fake News”. 
                               It is also interesting that even after he won presidential election he still keep mentioning “BarackObama” which is the most tweeted words.<br>
                               <b>Conclusion</b><br>
@@ -547,15 +544,15 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-w-80">
                             <h2 class="tm-color-primary tm-section-title mb-4">Machine Learning & Linear Regression</h2>
                             <p class="mb-5"><img src="img/socialmedia.png" alt="sm" style="float:left;width:80px;height:80px;">
-                            <p style="color: #069"; fontsize:10> Social Media</p> <br>
-                            Budget on Social Media Ads Prediction .<br>
+                            <p style="color: #069"; fontsize:10>Social Media</p> <br>
+                            <h1 style="color:black; font-size:30px;">Forecasting Budget For Social Media Ads</h1><br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://github.com/theleadio/datascience_demo/blob/master/social-ads-raw.xlsx?raw=true"target="_blank">https://github.com/theleadio/datascience_demo/blob/master/social-ads-raw.xlsx?raw=true</a><br>
                             Project link: <a href="https://colab.research.google.com/drive/1FwrvrVJe55ZeUilmI-JSnqT0BwHY84OC?usp=sharing" target="_blank">https://colab.research.google.com/drive/1FwrvrVJe55ZeUilmI-JSnqT0BwHY84OC?usp=sharing</a><br><br>
                             
                             I will be using the Data Science OSEMN framework to analyze the data. Here I want to show how to use linear regression for modelling.
                             <br><br>
-                            <b>Importing Python Libraries</b><br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             First, we need to import the necessary python libraries for this analysis. These include the basic packages such 
                             pandas, seaborn and matplotlib. In addition pyplot and sklearn linear model
                             
@@ -564,8 +561,8 @@ https://templatemo.com/tm-536-dream-pulse
                                 import seaborn as sns
                                 import matplotlib.pyplot as plt
                                 from sklearn.linear_model import LinearRegression</p>
-                            </div><br>
-                            <b>Data Source</b><br>
+                            </div><br><br>
+                            <u><b>Data Source</b></u><br>
                             The data that I am using for this portfolio is the raw dataset sample given in the class as per link dataset before. 
                             From the look if it, contains columns and rows with numbers and 2 columns with numbers in the table.
                             I will use Python to perform all data analysis and visualization. This data is originally in a CSV file and we will 
@@ -579,8 +576,8 @@ https://templatemo.com/tm-536-dream-pulse
                               <p>df</p>
                             </div>
                             <img src="img/socio1.png" alt="socio1" style="width:500px"><br>
-                            Our focus is the will be social ads column facebook, google & instagram column<br> 
-                            <br><b>Data Scrubbing</b><br>
+                            Our focus is the will be social ads column facebook, google & instagram column<br><br>
+                            <u><b>Data Scrubbing</b></u><br>
                             Next, we will check if the columns have any null values.
                             <div class="transparentbox">
                               <p>df.isnull().sum()</p>
@@ -631,13 +628,13 @@ https://templatemo.com/tm-536-dream-pulse
                             </div>
                             Let see how our table look like after the mapping and dummy.
                             <img src="img/socio7.png" alt="socio7"><br>
-                            Looks like a good table for analyzing. 
+                            Looks like a good table for analyzing.<br><br>
 
-                            <br><b>Explore Data</b><br>
+                            <u><b>Explore Data</b></u><br>
                             For exploring the data after the data scrubing, I would like to use scatterplot to visualize the data.
                             It is a visualization technique that shows the relationship between two numerical variables. As we can see the three column google, facebook & instagram
-                            has continous number as its input, thus can be use in a scatter plot.
-                            <br><b>Visualizing Data as Scatterplot</b><br>
+                            has continous number as its input, thus can be use in a scatter plot.<br><br>
+                            <u><b>Visualizing Data as Scatterplot</b></u><br>
                             We plot 3 scatterplot, column google, facebook & instagram side by side. We first called up the body of the plot as per line below using the plt library to check.
                             <div class="transparentbox">
                               <p>
@@ -660,15 +657,15 @@ https://templatemo.com/tm-536-dream-pulse
                                 sns.regplot(data=df, x="instagram", y="sales", ax=subs[2])<br>
                                </p>
                             </div><br>
-                            <img src="img/socio10.png" alt="socio10" style="width:800px">
+                            <img src="img/socio10.png" alt="socio10" style="width:800px"><br><br>
                             Findinds from scatterplot<br>
                             1.   All three social ads has positive relationship with sales. <br>
                             2.   However google a lot more point sets near to the line,facebook line is similar to google, but more disperse, 
                             while instagram is more scatter than all of them. <br>
                             3.   In addition, instagram has more weak points where some points are futher than the rest of them which show a 
                             really low positive relationship.<br>
-                            Now after the scrubing and a bit of exploration of the data, we can moving on to modelling data.
-                            <b>Model Data</b><br>
+                            Now after the scrubing and a bit of exploration of the data, we can moving on to modelling data.<br><br>
+                            <u><b>Model Data</b></u><br>
                             In modelling the data, not all your features or values are essential to predicting your model. 
                             What you need to do is to select the relevant ones that contribute to the prediction of results. 
                             For this portfolio, i will be using Linear Regression function to forecast future values<br>
@@ -737,9 +734,9 @@ https://templatemo.com/tm-536-dream-pulse
                                 print("Coefficient",  model.coef_)
                               </p>
                             </div>
-                            <img src="img/socio15.png" alt="socio15"><br>
+                            <img src="img/socio15.png" alt="socio15"><br><br>
                             
-                            Findings from Model<br>
+                            <u>Findings from Model</u><br>
                             This Rsquare is higher than first one, meaning more variables make the model more accurate<br>
                             The Intercept is lower, the constant of the equation reduce significantly.
                             From the coeffticient, facebook has a higher multiplier than google, instagram has negative coefficient, which reduceds the value if used<br>
@@ -767,8 +764,8 @@ https://templatemo.com/tm-536-dream-pulse
                                 print("Coefficient",  model.coef_)
                               </p>
                             </div>
-                            <img src="img/socio16.png" alt="socio16"><br>
-                            Findings from Model<br>
+                            <img src="img/socio16.png" alt="socio16"><br><br>
+                          <u>Findings from Model</u><br>
 
                             1. This Rsquare is increase a bit, still a better model to use<br>
                             2. The Intercept is lower a bit,it shows minimal changes in the multiplier<br>
@@ -782,7 +779,7 @@ https://templatemo.com/tm-536-dream-pulse
                             4. is_large<br>
                             5. rural<br>
                             6. sub_urban<br>
-                            7. instagram<br>
+                            7. instagram<br><br>
 
                             Let take a scenario, where we have 100 units of social ads to have, allocate to which social ads and segment to maximize the revenue.<br>
                             Maximize profit method - allocate all in facebook since it has the largest positive coefficient, and also choose urban & is_large as well.
@@ -796,11 +793,12 @@ https://templatemo.com/tm-536-dream-pulse
                                   print(F"Expected Revenue: {expected_revenue2:,.2f}")</p><br></div>
                                   <img src="img/socio18.png" alt="socio18"><br>
 
-                            Based on this model, we know the expected revenue by maximizing facebook we will get RM 55,015,987.92, since there is no limit which to prioritize.   <br>
-                            <b>Findings from Model</b><br>
+                            Based on this model, we know the expected revenue by maximizing facebook we will get RM 55,015,987.92, since there is no limit which to prioritize. <br><br>
+                            <u>Findings from Model</u><br>
                             1. More variables are better for better model, proven by the increasing R Square value each time column are added.<br>
-                            2. In the model, we need to find columns that has positive coefficient, to rank which is better for the forecasting<br>
-                            <b><Interpreting Data></b><br>
+                            2. In the model, we need to find columns that has positive coefficient, to rank which is better for the forecasting.<br><br>
+
+                            <u><b>Interpreting Data</b></u><br>
                             Sugesstion on Social Ads Budget.<br>
                             1. Focus on Facebook and Google social ads for more revenue.
                             2. Focus on large segment and urban locality to increase sales .<br>
@@ -817,8 +815,8 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-w-80">
                             <h2 class="tm-color-primary tm-section-title mb-4">Sentiment Analysis</h2>
                             <p class="mb-5"><img src="img/tripadvisor.png" alt="ta" style="float:left;width:80px;height:80px;">
-                            <p style="color: #069"; fontsize:10>TripAdvisor Reviews</p> <br>
-                            Doing Sentiment Analysis on general Tripadvisor reviews.<br>
+                            <p style="color: #069"; fontsize:10>TripAdvisor</p> <br>
+                            <h1 style="color:black; font-size:30px;">Sentiment Analysis On Tripadvisor Reviews</h1><br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://raw.githubusercontent.com/theleadio/datascience_demo/master/tripadvisor_hotel_reviews.csv" target="_blank">https://raw.githubusercontent.com/master/tripadvisor_hotel_reviews.csv</a><br>
                             Project link: <a href="https://colab.research.google.com/drive/1rVvU4m0lTDYt8YQTcAjZjBCxZWvXAcXm?usp=sharing" target="_blank">https://colab.research.google.com/drive/1rVvU4m0lTDYt8YQTcAjZjBCxZWvXAcXm?usp=sharing</a><br>
@@ -826,7 +824,7 @@ https://templatemo.com/tm-536-dream-pulse
                             The method I am using to analyze the dataset is by using Data Science OSEMN framework.<br>
                             For this project, I am interested with evaluating ratings/reviws in TripAdvisor website by using Sentiment Analysis.
                             <br><br>
-                            <b>Importing Python Libraries</b><br>
+                            <u><b>Importing Python Libraries</b></u><br>
                             First, we need to import the necessary python libraries for this analysis. These include the basic packages such as
                             pandas, seaborn, matplotlib. We will be importing as well wordcloud, nltk and specifically the VADER Sentiment Analysis 
                             (Valence Aware Dictionary and Sentiment Reasoner)
@@ -840,7 +838,7 @@ https://templatemo.com/tm-536-dream-pulse
                               from nltk.sentiment.vader import SentimentIntensityAnalyzer<br>
                               nltk.download('vader_lexicon')</p>
                             </div><br>
-                            <b>Data Source</b><br>
+                            <u><b>Data Source</b></u><br>
                             The data that I am using for this portfolio is the raw dataset in github , sample from class as per link prior.
                             Looking at the table, it has 2 columns reviews and ratings  which in words and numbers respectively.
                             I will use Python to perform all data analysis and visualization. This data is originally in a CSV file and we will 
@@ -854,8 +852,8 @@ https://templatemo.com/tm-536-dream-pulse
                               </p>
                               </div>
                             <img src="img/trip1.png" alt="trip1" style="width:1000px"> 
-                            Both columns are important for our analysis<br> 
-                            <br><b>Data Scrubbing</b><br>
+                            Both columns are important for our analysis<br><br>
+                            <u><b>Data Scrubbing</b></u><br>
                             Next, we will check if the columns have any null values.
                             
                             <div class="transparentbox">
@@ -871,27 +869,27 @@ https://templatemo.com/tm-536-dream-pulse
                             </p>
                             </div>
                             So far there is no scrubing need to be done because there is no null values, 
-                            and their data type is what we expect to do our sentiment analysis.<br>
-                            <b>Explore Data</b><br>
+                            and their data type is what we expect to do our sentiment analysis.<br><br>
+                            <u><b>Explore Data</b></u><br>
                             Now for exploring the data after the data scrubing, I would like to use countplot to visualize the data.
                             It is a visualization technique that very useful to show the counts of observations in each categorical 
-                            bin using bars. Since we are focusing on Rating data, I will use ratings columns as the x axis in the countplot 
-                            <br><b>Visualization Data as Countplot</b>
+                            bin using bars. Since we are focusing on Rating data, I will use ratings columns as the x axis in the countplot.<br><br> 
+                            <u><b>Visualization Data as Countplot</b></u><br>
                             <div class="transparentbox">
                               <p>sns.set(rc={'figure.figsize':(10,8)})<br>
                                 sns.countplot(data=df, x='Rating', color='blue')</p>
                               </div>
                               <img src="img/trip4.png" alt="trip4">
                             </p>
-                            </div>
-                            Findings from countplot<br>
+                            </div><br><br>
+                            <u>Findings from countplot</u><br>
                             1. From the countplot, we can see a couple interesting counts. Most reviews has rating 4 and 5, which show favorable view on services
                             used through tripadvisor.<br>
                             2. While we also could point out that rating 1,2 and 3 has around the same count, but if we totalled it up, 
                             total rating 1 - 3 has roughly the same as rating 4. It shows that unfavourable/mediocre ratings count for 30% of the review,
-                            which could be alarming to tripadvisor.
+                            which could be alarming to tripadvisor.<br><br>
 
-                            <br><b>Visualization Data as Word Cloud</b><br>
+                            <u><b>Visualization Data as Word Cloud</b></u><br>
                             Create Word Cloud, a visualization technique for texts that are natively used for visualizing the tags or keywords from the websites. 
                             These keywords typically are single words that depict the context of the webpage the word cloud is being made from. These words are 
                             clustered together to form a Word Cloud. Lets use the word cloud coding and set the plot as per coding below.
@@ -913,8 +911,8 @@ https://templatemo.com/tm-536-dream-pulse
                               <div class="transparentbox">
                                 <p>wordcloud_generator(df['Review'], title="Most used words in reviews")</p>
                                 </div><br>
-                              <img src="img/trip5.png" alt="trip5"><br>
-                              Findings from Word Cloud<br>
+                              <img src="img/trip5.png" alt="trip5"><br><br>
+                              <u>Findings from Word Cloud</u><br>
                               From the word cloud, we can several words are being visualized as more used such as 'hotel', 'room'<br>
                               'resort' and others. This word cloud doesn't tell much on how the words are being used to in its own. 
                               <br>Let set word cloud reviews based on ratings 1 to ratings 5.<br>
@@ -929,7 +927,7 @@ https://templatemo.com/tm-536-dream-pulse
                                 <img src="img/trip8.png" alt="trip8" style="float:left;width:400px;height:400px;">
                                 <img src="img/trip9.png" alt="trip9" style="float:left;width:400px;height:400px;">
                                 <img src="img/trip10.png" alt="trip10" style="width:400px;height:400px;"><br><br>
-                                Findings from Word Cloud - Rating 1 to Rating 5<br><br>
+                                <u>Findings from Word Cloud - Rating 1 to Rating 5</u><br><br>
 
                                 1. Mostly in general, the bigger words contain hotel, restaurant, good, resort, room.<br>
                                 2. Rating 4 and 5 have around the same words visualized.<br>
@@ -938,8 +936,8 @@ https://templatemo.com/tm-536-dream-pulse
                                 reviews based on their expriences.<br>
                               <b>Model Data</b><br>
                               For words, we can use IDF-Vectorizer for Machine Learning to help us in modeling. Afterward we can use Sentiment Analyzer
-                              to analyze further on the words.
-                              <b>Modelling using query TF-IDF Vectorizer</b><br>
+                              to analyze further on the words.<br><br>
+                              <u>Modelling Using Query TF-IDF Vectorizer</u><br>
                               Next, we want to create query using a vectorizer.<br>
                               It is a statistical measure that evaluates how relevant a word is to a document in 
                               a collection of documents. This is done by multiplying two metrics:<br>
@@ -967,14 +965,14 @@ https://templatemo.com/tm-536-dream-pulse
                                 </p>
                                 </div><br>
                                 And we get the input as per below. 
-                                <img src="img/trip13.png" alt="trip13" style="height:300"><br>
-                                Findings from query TF-IDF Vectorizer<br>
+                                <img src="img/trip13.png" alt="trip13" style="height:300"><br><br>
+                                <u>Findings from query TF-IDF Vectorizer</u><br><br>
 
                                 1. We can see top 5 review with the words on hotel. We can see the word hotels are 
                                 used couple of times in the same sentences and altogether in the review. <br>
-                                In addition here we can use other words as well if you wish.<br>
+                                In addition here we can use other words as well if you wish.<br><br>
 
-                                <b>Modelling using Sentiment Analysis</b><br>
+                                <u>Modelling using Sentiment Analysis</u><br>
                                 This sentiment analysis help you determine the ratio of positive to negative engagements about a specific topic using the capabilities of 
                                 the Natural Language Toolkit (NLTK). Here we would like to the sentiments of the words used but relating to the rating.
                                 <div class="transparentbox">
@@ -1010,8 +1008,8 @@ https://templatemo.com/tm-536-dream-pulse
                                       <p><df[(df['Rating'] == 1) & (df['Sentiments'] >0)].sort_values("Sentiments", ascending = False)[0:5]
                                       </p>
                                       </div>
-                                      <img src="img/trip17.png" alt="trip17" style="width:1000px"><br>
-                                      <b>Interpreting Data</b><br>
+                                      <img src="img/trip17.png" alt="trip17" style="width:1000px"><br><br>
+                                      <u><b>Interpreting Data</b></u><br>
                                       Findings from sentiments.<br>
                                       1. People tend to write longer with complain.<br>
                                       2. The unfavourable sentiments are quite specific.<br>
@@ -1037,8 +1035,8 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-w-80">
                             <h2 class="tm-color-primary tm-section-title mb-4">Dashboard</h2>
                             <p class="mb-5"><img src="img/HR.png" alt="hr" style="float:left;width:80px;height:80px;">
-                            <p style="color: #069"; fontsize:10> HR Atrition</p> <br>
-                            Creating an online dashboard Google Data Studio to analyse HR Atrition.<br>
+                            <p style="color: #069"; fontsize:10>HR</p> <br>
+                            <h1 style="color:black; font-size:30px;">Create Online Dashboard Google Data Studio To Analyse HR Atrition</h1><br>
                             The datasets and complete code can be found at the link below.<br>
                             Dataset link: <a href="https://raw.githubusercontent.com/theleadio/datascience_demo/master/HR_dataset.csv"target="_blank">https://raw.githubusercontent.com/theleadio/datascience_demo/master/HR_dataset.csv</a><br>
                             Project link: <a href="https://datastudio.google.com/reporting/98329e03-a8ff-47a4-8e62-ddc149912d47" target="_blank">https://datastudio.google.com/reporting/98329e03-a8ff-47a4-8e62-ddc149912d47</a><br>
@@ -1048,8 +1046,8 @@ https://templatemo.com/tm-536-dream-pulse
                             Here, I want to create an interactive online dashboard using Google Analytics which shown above. I am looking for Staff attrition specifically, which refers to the loss of employees through a natural process, 
                             such as retirement, resignation, elimination of a position, personal health, or other similar reasons.
                             <br>Dashboard is a good way to give data visualization tool that tracks, analyzes, and displays KPIs, metrics, and critical data points. 
-                            Dashboards empower both technical and non-technical users to understand and leverage business intelligence to make more informed decisions 
-                            <br><b>Data Source</b><br>
+                            Dashboards empower both technical and non-technical users to understand and leverage business intelligence to make more informed decisions. <br><br>
+                            <u><b>Data Source</b></u><br>
                             The data that I am using for this portfolio is the raw dataset sample given in the class as per link dataset earlier on. It is a dataset that contains HR related input.<br>
                             Lets review the data first before we use Google Data Studio.<br>
                             Overview<br>
@@ -1066,41 +1064,42 @@ https://templatemo.com/tm-536-dream-pulse
                             role - Position of each staff according to sales, technical,support, IT,product_mng, marketing, RandD, accounting, hr, management<br>
                             salary - this is the salary range of the staff according to low, medium and high.<br><br>
                             Looks like good table for us to use in the dashboard to visualize the HR attriton. Let load the data using file upload as per below.<br>
-                            <img src="img/db1.png" alt="db1" style="width:800px"><br>
+                            <img src="img/db1.png" alt="db1" style="width:800px"><br><br>
 
-                            <br><b>Scrub Data</b><br>
-                            Here, we don't have a method to scrub data as it is. We can only scrub data at the source csv. However we can filter here by unchecking blank input in the chart if there is.
-                            <br><br><b>Visualization Data as Scorecard</b><br>
+                            <u><b>Data Scrubbing</b></u><br>
+                            Here, we don't have a method to scrub data as it is. We can only scrub data at the source csv. However we can filter here by unchecking blank input in the chart if there is.<br><br>
+                            <u><b>Explore Data</b></u>
+                            <u><b>Visualization Data as Scorecard</b></u><br>
                             In dashboard, i would like to add a few scorecard as shown below. Click on Add Chart and choose scorecard. You need to assign them metric by dragging related columns that you wish to show. 
                             Then you can use Count metric to show value. This dragging method is used to select data for each chart.
-                            <br><img src="img/db2.png" alt="db2"><br>
-                            <b>Visualization Data as Time Series Chart</b>
-                            Here, I used time series to show performance of the staff and its numbers. We can how many performers and under performers.
-                            <img src="img/db3.png" alt="db3"><br>
-                            <b>Visualization Data as Treemap</b>
+                            <br><img src="img/db2.png" alt="db2"><br><br>
+                            <u><b>Visualization Data as Time Series Chart</b></u><br>
+                            Here, I used time series to show performance of the staff and its numbers. We can how many performers and under performers.<br>
+                            <img src="img/db3.png" alt="db3"><br><br>
+                            <u><b>Visualization Data as Treemap</b></u><br>
                             I use Treemap for showing salary range. Treemap is type of data visualization that is especially useful for displaying hierarchical data.<br>	
-                            <br><img src="img/db4.png" alt="db4"><br>
-                            <b>Visualization Data as Pie Chart</b>
+                            <br><img src="img/db4.png" alt="db4"><br><br>
+                            <u><b>Visualization Data as Pie Chart</b></u><br>
                             Another type chart, the pie chart. Here i use it to show how many percentage staff resign and staff based on the 15,0001 
-                            <br><img src="img/db5.png" alt="db5"><br>
-                            <b>Visualization Data as Bar Chart</b>
+                            <br><img src="img/db5.png" alt="db5"><br><br>
+                            <u><b>Visualization Data as Bar Chart</b></u><br>
                             Here, I used Bar Chart to show 3 things<br>
                             1. Numbers of Staffs according to roles.<br>
                             2. Number of projects handled by staff that left & stay<br>
                             3. Number of projects handled by staff that left & stay  
                             <br><img src="img/db6.png" alt="db6"><br>
                             <br><img src="img/db7.png" alt="db7"><br>
-                            <br><img src="img/db8.png" alt="db8"><br>
-                            <b>Interpreting Data</b><br>
-                                      Findings from Dashboard<br>
+                            <br><img src="img/db8.png" alt="db8"><br><br>
+                            <u><b>Interpreting Data</b></u><br><br>
+                                      <u>Findings from Dashboard</u><br>
                                       1. Staffs with more projects more than 4 tend to left shows overworking tend to force staff to resign..<br>
                                       2. In the same time, staffs with only 1 projects also left which mean underwork also a problem.<br>
                                       3. Only a handful staffs stay after 3 years, which show a high staff turnover.<br><br>
 
-                            Sugegestion to the HR Department.<br>
-                            1. Set appropriate number of projects to be assigned to the staff.
-                            2. Give promotions accordingly to their performance.
-                            3. Salary need to be streamlined in the company, since there is huge gap between medium and high salary earners.
+                            <u>Sugegestion to the HR Department.</u><br>
+                            1. Set appropriate number of projects to be assigned to the staff.<br>
+                            2. Give promotions accordingly to their performance.<br>
+                            3. Salary need to be streamlined in the company, since there is huge gap between the number of small and medium/high salary earners.
 
 
 
@@ -1122,7 +1121,7 @@ https://templatemo.com/tm-536-dream-pulse
                             HI! I am Khairudin. Currently, I’m a business development executive. For the past 14 years, I’ve been in roles where I assist 
                             and manage different type of projects in Finance and EPCC from start to finish. I’m well-versed in planning and 
                             development, helping clients to achieve their business needs and finalising financial reporting in group and company level. 
-                            To further upskill myself, I recently completed IBM Data Analyst Professional Certificate and Data Science Uncut Bootcamp! - LEAD. 
+                            To further upskill myself, I recently completed IBM Data Analyst Professional Certificate and Data Science Uncut Bootcamp - LEAD. 
                             I look forward to continue to be involved in projects, either as a Data Analyst or Data Scientist.<br><br>
                             You can find my resume from the link <a href="https://drive.google.com/file/d/1WBPc2Rf6--t5z9qcUUu5cnW8CeS1mj9R/view?usp=sharing"target="_blank">here</a> for your consideration.<br><br>
                             Feel free to connect with me at kudin36@yahoo.com if you ever want to talk about technology, business, and career.<br>
